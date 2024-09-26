@@ -187,6 +187,11 @@ function UpdateTask(id,description)
     let taskToUpdate = tasks.find(task => task.id===id);
     taskToUpdate.description = description;
 
+    if(!taskToUpdate)
+    {
+        console.log("Task not found")
+    }
+
     taskToUpdate.updatedAt = new Date().toISOString();
 
     WriteToJson()
