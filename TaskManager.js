@@ -164,9 +164,9 @@ function ListInProgressTasks()
 
 }
 
-function MarkInProgress(id,description)
+function MarkInProgress(id)
 {
-    let taskToMark = tasks.find(task => task.id === id && task.description === description)
+    let taskToMark = tasks.find(task => task.id == id )
 
     if(!taskToMark)
     {
@@ -177,7 +177,7 @@ function MarkInProgress(id,description)
    taskToMark.updatedAt = new Date().toISOString()
 
     WriteToJson()
-    console.log(`Task(s) with id ${id} and '${description}' marked in progress.`);
+    console.log(`Task(s) with id ${id} and '${taskToMark.description}' marked in progress.`);
 }
 
 

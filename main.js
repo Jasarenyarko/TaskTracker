@@ -93,6 +93,15 @@ function handleMenuOption(option) {
                 taskManager.DeleteTask(deleteTask)
                 displayMenu()
             })
+            break;
+        case "5":
+            taskManager.ListTasks()
+            input.question("Input ID of Task to mark in progress ",(markInProgress)=>
+            {
+                taskManager.MarkInProgress(markInProgress)
+                displayMenu()
+            })
+            break;
         case "6":
             console.log("Exiting the application.");
             input.close();
