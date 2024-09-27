@@ -77,8 +77,6 @@ function AddTask(description,status="pending")
         console.log(newTask)
 
         }
-        
-
         catch(parseErr){
             console.error("Error parsing JSON:", parseErr.message);
         }
@@ -118,13 +116,15 @@ function ListDoneTasks()
         console.log(`No task found with status Done`);
         return;
     }
+    else{
     tasks.forEach(task => {
         {
             if (task.status === "Done" || task.status === "done")
             console.log(task)
         }
     }
-    )
+    )}
+   
 
 }
 
@@ -184,18 +184,19 @@ function MarkInProgress(id,description)
 
 function UpdateTask(id,description)
 {
-    let taskToUpdate = tasks.find(task => task.id===id);
-    taskToUpdate.description = description;
+    let taskToUpdate = tasks.find(task => task.id==id);
+    
 
     if(!taskToUpdate)
     {
         console.log("Task not found")
     }
 
+    taskToUpdate.description = description;
     taskToUpdate.updatedAt = new Date().toISOString();
 
     WriteToJson()
-    console.log(`Task with ${id} updated successfully`)
+    console.log(`Task with ID ${id} updated successfully`)
 }
 
 

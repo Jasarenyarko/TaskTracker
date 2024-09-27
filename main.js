@@ -1,3 +1,4 @@
+const { describe } = require("node:test");
 const taskManager = require("./TaskManager.js");
 const readline = require("readline")
 
@@ -8,23 +9,23 @@ let input = readline.createInterface({
 
 function Menu()
 {
-    let menuText = "Select an Option:\n";
+    let menuText = "";
     menuText += "1. Add/Create Task\n";
     menuText += "2. List Tasks\n";
     menuText += "3. Update Task\n";
     menuText += "4. Delete Task\n";
     menuText += "5. Mark In Progress\n";
     menuText += "6. QUIT\n";
-    menuText += "Your Input: ";
+    menuText += "Select an option: ";
     return menuText;
 }
 
 function ListMenu()
 {   
     let listMenuText = "1. List All Tasks\n";
-    listMenuText += "2. List Complete Tasks \n";
-    listMenuText += "3. List Incompleted Tasks";
-    listMenuText += "Your Input:";
+    listMenuText += "2. List Completed Tasks \n";
+    listMenuText += "3. List Incompleted Tasks\n";
+    listMenuText += "4. List Tasks In Progress";
     return listMenuText;
    
 }
@@ -37,7 +38,19 @@ function handleListMenu(option)
         case "1":
             taskManager.ListTasks()
             displayMenu()
-            handleListMenu()
+            break;
+        case "2":
+            taskManager.ListDoneTasks()
+            displayMenu()
+            break;
+        case "3":
+            taskManager.ListNotDoneTasks()
+            displayMenu()
+            break;
+        case "4":
+            taskManager.ListInProgressTasks()
+            displayMenu()
+            break;
     }
 
 }
@@ -55,13 +68,31 @@ function handleMenuOption(option) {
         case "2":
             console.log(ListMenu());
             input.question("Choose a list option: ", (listOption) => {
-                handleListMenu(listOption);
+                handleListMenu(listOption)
             });
             break;
         case "3":
-            console.log("Exiting the application.");
-            input.close();
+            taskManager.ListTasks()
+            input.question("Selected Id of Task to Update: ",(selectedID) =>{
+                input.question("Write new Description: ",(description)=>{
+                    if(description){
+                    taskManager.UpdateTask(selectedID,description)
+                    }
+                    else{
+                        console.log("Description cant be empty")
+                    }
+                displayMenu()
+                })
+            } )
             break;
+
+        case "4":
+            taskManager.ListTasks()
+            input.question("Input description of Task to Delete: ",(deleteTask)=>
+            {
+                taskManager.DeleteTask(deleteTask)
+                displayMenu()
+            })
         case "6":
             console.log("Exiting the application.");
             input.close();
