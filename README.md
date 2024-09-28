@@ -33,3 +33,19 @@ To get started with the Task Tracker CLI, you'll need to have [Node.js](https://
     ```bash
     npm install
     ```
+
+### Example
+
+```bash
+Welcome to your Task Tracker APP
+Select an Option:
+1. Add/Create Task
+2. List Tasks
+3. Update Task
+4. Delete Task
+5. Mark In Progress
+6. QUIT
+Your Input: 1
+Description of Task: Finish the report
+Task added successfully!
+
