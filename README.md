@@ -68,8 +68,6 @@ Tasks are stored in a JSON file (tasks.json), which includes properties like:
 - ***id***: Unique identifier for each task.
 - ***description***: The task's description..
 - ***status***: Current status of the task (pending, in-progress, or done).
-- ***Mark Tasks In Progress***: Update task status to reflect ongoing work.
-- ***Quit***: Exit the application gracefully.
 
 ### Example JSON format
 
