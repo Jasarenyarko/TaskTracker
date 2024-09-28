@@ -101,20 +101,20 @@ Feel free to submit issues and pull requests! Contributions are welcome to impro
 
 ### How to Contribute
 
-- 1. Fork the Repository
-- 2. Create a new branch
+1. Fork the Repository
+2. Create a new branch
 ```bash
 git checkout -b feature-name
 ```
-- 3. Make your changes and commit them:
+3. Make your changes and commit them:
 ```bash 
 git commit -m "Added a new feature"
 ```
-- 4. Push your code 
+4. Push your code 
 ```bash
 git push origin feature-name
 ```
-- 5. Create a pull request on GitHub
+5. Create a pull request on GitHub
 
 ### License
 
