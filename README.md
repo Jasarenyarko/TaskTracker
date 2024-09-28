@@ -49,3 +49,14 @@ Your Input: 1
 Description of Task: Finish the report
 Task added successfully!
 
+## Project Structure
+
+---
+
+```bash
+.
+├── TaskManager.js   # Module for managing tasks
+├── main.js          # Main entry point for CLI
+├── tasks.json       # File to store task data
+└── README.md        # Project documentation
+
