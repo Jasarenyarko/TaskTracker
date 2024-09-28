@@ -48,10 +48,10 @@ Select an Option:
 Your Input: 1
 Description of Task: Finish the report
 Task added successfully!
+```
 
-* Project Structure
 
----
+### Project Structure
 
 ```bash
 .
@@ -59,4 +59,14 @@ Task added successfully!
 ├── main.js          # Main entry point for CLI
 ├── tasks.json       # File to store task data
 └── README.md        # Project documentation
+```
 
+### Task Management
+
+Tasks are stored in a JSON file (tasks.json), which includes properties like:
+
+- <span style="background-color: #e0e0e0;">id</span>: Unique identifier for each task.
+- **description**: The task's description..
+- **status**: Current status of the task (pending, in-progress, or done).
+- **Mark Tasks In Progress**: Update task status to reflect ongoing work.
+- **Quit**: Exit the application gracefully.
