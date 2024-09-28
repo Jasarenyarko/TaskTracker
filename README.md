@@ -65,8 +65,25 @@ Task added successfully!
 
 Tasks are stored in a JSON file (tasks.json), which includes properties like:
 
-- <span style="background-color: #e0e0e0; padding: 2px; border-radius: 3px;">id</span>: Unique identifier for each task.
+- **id**: Unique identifier for each task.
 - **description**: The task's description..
 - **status**: Current status of the task (pending, in-progress, or done).
 - **Mark Tasks In Progress**: Update task status to reflect ongoing work.
 - **Quit**: Exit the application gracefully.
+
+### Example JSON format
+
+```bash
+[
+    {
+        "id": 1,
+        "description": "Complete the project",
+        "status": "pending"
+    },
+    {
+        "id": 2,
+        "description": "Review pull requests",
+        "status": "in-progress"
+    }
+]
+```
