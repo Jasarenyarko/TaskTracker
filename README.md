@@ -65,11 +65,11 @@ Task added successfully!
 
 Tasks are stored in a JSON file (tasks.json), which includes properties like:
 
-- **id**: Unique identifier for each task.
-- **description**: The task's description..
-- **status**: Current status of the task (pending, in-progress, or done).
-- **Mark Tasks In Progress**: Update task status to reflect ongoing work.
-- **Quit**: Exit the application gracefully.
+- ***id***: Unique identifier for each task.
+- ***description***: The task's description..
+- ***status***: Current status of the task (pending, in-progress, or done).
+- ***Mark Tasks In Progress***: Update task status to reflect ongoing work.
+- ***Quit***: Exit the application gracefully.
 
 ### Example JSON format
 
@@ -87,3 +87,40 @@ Tasks are stored in a JSON file (tasks.json), which includes properties like:
     }
 ]
 ```
+
+### Future Feature
+
+- Task Prioritization (low,medium and high).
+- Scheduling tasks with deadline
+- Task reminders
+- Ability to export task to csv and other formats
+
+### Contributing
+
+Feel free to submit issues and pull requests! Contributions are welcome to improve functionality, code quality, or documentation.
+
+### How to Contribute
+
+- 1. Fork the Repository
+- 2. Create a new branch
+```bash
+git checkout -b feature-name
+```
+- 3. Make your changes and commit them:
+```bash 
+git commit -m "Added a new feature"
+```
+- 4. Push your code 
+```bash
+git push origin feature-name
+```
+- 5. Create a pull request on GitHub
+
+### License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+### Contact
+
+For questions feel free to contact:
+- **Email:** jedidiah.asare512@gmail.com
