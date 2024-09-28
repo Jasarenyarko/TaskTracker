@@ -3,7 +3,7 @@
 A Command Line Interface (CLI) application for managing tasks. This simple, interactive tool allows users to create, list, update, and delete tasks from a JSON file. It's built using Node.js and utilizes the built-in readline module for input/output operations.
 
 Project URL
-https://github.com/Jasarenyarko/TaskTracker
+https://roadmap.sh/projects/task-tracker
 
 ### Features:
 - **List Tasks**: View all tasks or filter them by completed or incomplete status.
