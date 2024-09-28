@@ -49,7 +49,7 @@ Your Input: 1
 Description of Task: Finish the report
 Task added successfully!
 
-## Project Structure
+* Project Structure
 
 ---
 
