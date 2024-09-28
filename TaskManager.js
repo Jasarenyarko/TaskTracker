@@ -148,19 +148,20 @@ function ListNotDoneTasks()
 
 function ListInProgressTasks()
 {
-    let inProgress = tasks.find(task => task.status === "In progress" || task.status === "in progress");
+    let inProgressTask = tasks.find(task => task.status === "In progress" || task.status === "in progress");
 
-    if (!inProgress) {
-        console.log(`No tasks in progress`);
+    if (!inProgressTask) {
+        console.log(`No task found with status Done`);
         return;
     }
+    else{
     tasks.forEach(task => {
         {
-            if (task.status === "in progress" || task.status === "In Progress")
+            if (task.status === "In progress" || task.status === "In progress")
             console.log(task)
         }
     }
-    )
+    )}
 
 }
 

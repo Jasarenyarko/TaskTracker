@@ -1,4 +1,4 @@
-const { describe } = require("node:test");
+
 const taskManager = require("./TaskManager.js");
 const readline = require("readline")
 
@@ -96,7 +96,7 @@ function handleMenuOption(option) {
             break;
         case "5":
             taskManager.ListTasks()
-            input.question("Input ID of Task to mark in progress ",(markInProgress)=>
+            input.question("Input ID of Task to mark in progress: ",(markInProgress)=>
             {
                 taskManager.MarkInProgress(markInProgress)
                 displayMenu()
